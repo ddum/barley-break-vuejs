@@ -1,12 +1,17 @@
 <template>
-  <a class="mdl-button mdl-button--colored mdl-button--raised">
+  <a class="mdl-button mdl-button--colored mdl-button--raised" v-on:click="restart">
     Restart
   </a>
 </template>
 
 <script>
 export default {
-  name: 'restart-button'
+  name: 'restart-button',
+  methods: {
+    restart: function () {
+      this.$emit('restart');
+    }
+  }
 }
 </script>
 
